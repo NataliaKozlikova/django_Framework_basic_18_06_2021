@@ -103,11 +103,20 @@ AUTH_PASSWORD_VALIDATORS = [
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+LANGUAGE_CODE = 'ru-RU'
+
+TIME_ZONE = 'Europe/Moscow'
+
+USE_TZ = False
+
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "geekshop", "static"),
 )
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
