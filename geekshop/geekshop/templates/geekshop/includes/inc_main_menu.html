@@ -6,7 +6,7 @@
         <li><a href="{% url 'contacts' %}">контакты</a></li>
         {% if user.is_authenticated %}
             <li>
-                <a href="{#% url 'auth:edit' %#}">
+                <a href="{% url 'auth:edit' %}">
                     {{ user.first_name|default:'Пользователь' }}
                 </a>
             </li>
