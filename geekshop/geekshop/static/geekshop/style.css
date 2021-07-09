@@ -41,6 +41,7 @@ html, body {
 .menu {
 	list-style-type: none;
 	margin-top: 67px;
+	margin-bottom: 30px;
 	float: right;
 }
 .menu li {
@@ -74,11 +75,11 @@ html, body {
 .search {
 	display: block;
 	width: 23px;
-	height: 23px;	
+	height: 23px;
 	background-image: url(img/search.png);
 	position: absolute;
 	top: 63px;
-	left: 1176px;
+	left: 950px;
 }
 .basket {
 	display: block;
@@ -87,7 +88,12 @@ html, body {
 	background-image: url(img/basket.png);
 	position: absolute;
 	top: 63px;
-	left: 1210px;
+	left: 1000px;
+}
+
+.basketcount {
+    color: red;
+    font-size: 24px;
 }
 
 .clearfix:after {
@@ -364,7 +370,7 @@ html, body {
 
 .trending-products {
 	margin-top: 53px;
-	
+
 }
 .trending-products .block a img {
 	float: left;
