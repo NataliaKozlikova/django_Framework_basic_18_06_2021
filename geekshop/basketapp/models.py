@@ -22,3 +22,19 @@ class Basket(models.Model):
         verbose_name='время',
         auto_now_add=True,
     )
+
+    @property
+    def product_cost(self):
+        return self.product.price * self.quantity
+
+    @property
+    def total_quantity(self):
+        _items = Basket.objects.filter(user=self.user)
+        _totel_quantity = sum(list(map(lambda x: x.quantity, _items)))
+        return _totel_quantity
+
+    @property
+    def total_cost(self):
+        _items = Basket.objects.filter(user=self.user)
+        _totel_cost = sum(list(map(lambda x: x.product_cost, _items)))
+        return _totel_cost
